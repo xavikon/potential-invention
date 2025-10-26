@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,84,55,109"/>
+<area shape="rect" id="Node000001" href="$classsrc_1_1modules_1_1base_1_1BaseModule.html" title=" " alt="" coords="105,55,325,80"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="68,88,134,77,135,83,69,93"/>
+<area shape="rect" id="Node000004" href="$classtests_1_1emulation_1_1base_1_1EmulatedModule.html" title="Base class for emulated modules." alt="" coords="103,105,328,145"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="69,100,103,105,102,110,68,105"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html" title=" " alt="" coords="395,5,616,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="304,50,429,28,430,33,304,55"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html" title=" " alt="" coords="407,55,604,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="340,65,406,65,406,70,340,70"/>
+<area shape="rect" id="Node000005" href="$classtests_1_1emulation_1_1cmis_1_1CMISEmulatedModule.html" title=" " alt="" coords="376,105,635,145"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="342,122,376,122,376,127,342,127"/>
+<area shape="rect" id="Node000006" href="$classtests_1_1emulation_1_1sff_1_1SFFEmulatedModule.html" title="Emulates an SFF&#45;compliant module." alt="" coords="388,169,623,209"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="320,145,415,166,414,171,319,150"/>
+</map>

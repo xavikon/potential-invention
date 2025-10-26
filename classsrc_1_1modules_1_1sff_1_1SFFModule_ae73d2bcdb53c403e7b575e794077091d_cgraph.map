@@ -1,0 +1,21 @@
+<map id="src.modules.sff.SFFModule.get_configuration" name="src.modules.sff.SFFModule.get_configuration">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,229,228,269"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a3decb2758dadaf2ecabc8d91e920c69c" title=" " alt="" coords="299,165,500,205"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,227,297,206,298,211,206,232"/>
+<area shape="rect" id="Node000009" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a2761e56798a7023ee9d8171c9caa552f" title=" " alt="" coords="299,229,500,269"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="228,247,285,247,285,252,228,252"/>
+<area shape="rect" id="Node000010" href="$classsrc_1_1modules_1_1base_1_1BaseModule.html#a6bb8e32dd8de03f2b3529d499d6f07af" title=" " alt="" coords="276,293,523,333"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="206,267,298,288,297,293,205,272"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a2e52928a493945775d160881310609e6" title=" " alt="" coords="571,5,796,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,163,484,110,525,80,569,55,585,48,588,53,572,60,528,85,487,114,424,167"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a8fadfa018dd158d3af7de512c2a85dc2" title=" " alt="" coords="583,69,784,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="450,163,570,119,595,111,596,116,572,124,452,168"/>
+<area shape="rect" id="Node000005" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a1f4a9d4397232ca2cf166c74a50c00eb" title=" " alt="" coords="571,133,796,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="500,171,557,165,557,170,501,177"/>
+<area shape="rect" id="Node000006" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#ad676a05e85ca2bb115955df520510140" title=" " alt="" coords="583,197,784,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="501,194,570,202,569,207,500,199"/>
+<area shape="rect" id="Node000007" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a27e41dccd22970678e2a32a7234ca8d6" title=" " alt="" coords="571,261,796,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="492,203,524,215,548,231,572,247,589,254,587,259,569,252,545,235,521,220,490,208"/>
+<area shape="rect" id="Node000008" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#ace3c41f8e23948b1d90f9e227aa1d98d" title=" " alt="" coords="583,325,784,365"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="502,201,524,215,536,227,543,240,549,265,555,289,562,300,572,311,579,316,576,320,569,315,557,303,550,291,544,266,538,242,532,230,521,219,499,206"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="tests.emulation.base.MemoryMap.read_word" name="tests.emulation.base.MemoryMap.read_word">
+<area shape="rect" id="Node000001" title="Read a 16&#45;bit word from the current page." alt="" coords="5,37,223,77"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1base_1_1MemoryMap.html#ab1f7401ddba58b20eb1213dcbfd0cfae" title="Read a byte from the current page." alt="" coords="271,5,488,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,42,257,37,258,43,223,47"/>
+<area shape="rect" id="Node000003" href="$classtests_1_1emulation_1_1hardware_1_1EmulatedI2CBus.html#aa8927b64bfc03e1b4c1bbdaa14614cbf" title=" " alt="" coords="280,69,479,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,68,267,73,266,78,223,73"/>
+</map>

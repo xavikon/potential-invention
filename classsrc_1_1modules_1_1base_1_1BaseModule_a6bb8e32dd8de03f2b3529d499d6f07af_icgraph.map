@@ -1,0 +1,15 @@
+<map id="src.modules.base.BaseModule.has_capability" name="src.modules.base.BaseModule.has_capability">
+<area shape="rect" id="Node000001" title=" " alt="" coords="300,165,547,205"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a33b10a4b1376fcfe2ed6aebb2465014b" title=" " alt="" coords="5,5,252,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="389,158,328,107,290,82,251,60,222,48,224,43,253,55,293,77,331,103,392,154"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#ae73d2bcdb53c403e7b575e794077091d" title=" " alt="" coords="17,69,240,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,163,251,124,210,112,212,107,253,119,361,158"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a4ee4bb9014d315a32cb2e5e8477a3a85" title=" " alt="" coords="5,133,252,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,173,252,169,252,164,287,168"/>
+<area shape="rect" id="Node000005" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a749ec10a0a54ba0faa14e9499fe08a79" title=" " alt="" coords="17,197,240,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="287,203,240,208,240,203,286,198"/>
+<area shape="rect" id="Node000006" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#ad63e182d3b08a2f8af670fa4bedffb9d" title=" " alt="" coords="6,261,251,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="361,213,253,252,212,264,210,259,251,247,359,208"/>
+<area shape="rect" id="Node000007" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#ad2e5ca055b1ea761379afbf3084c2e60" title=" " alt="" coords="18,325,239,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="392,217,331,268,293,293,253,316,224,328,222,323,251,311,290,289,328,263,389,213"/>
+</map>

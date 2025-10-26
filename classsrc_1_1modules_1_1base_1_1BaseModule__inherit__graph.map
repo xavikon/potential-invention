@@ -1,0 +1,9 @@
+<map id="src.modules.base.BaseModule" name="src.modules.base.BaseModule">
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,119,330,404"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html" title=" " alt="" coords="5,472,219,897"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,419,171,473,166,471,180,417"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html" title=" " alt="" coords="243,452,432,917"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="268,417,278,451,272,453,263,418"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="203,5,245,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,84,227,119,221,119,221,84"/>
+</map>

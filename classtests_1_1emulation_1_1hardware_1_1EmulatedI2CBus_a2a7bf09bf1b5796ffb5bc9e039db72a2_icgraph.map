@@ -1,0 +1,5 @@
+<map id="tests.emulation.hardware.EmulatedI2CBus.write_byte" name="tests.emulation.hardware.EmulatedI2CBus.write_byte">
+<area shape="rect" id="Node000001" title=" " alt="" coords="271,5,473,45"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1base_1_1MemoryMap.html#af99b791e01a7ec639482fbae04b37aa4" title="Write a 16&#45;bit word to the current page." alt="" coords="5,5,223,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,28,223,28,223,23,257,23"/>
+</map>

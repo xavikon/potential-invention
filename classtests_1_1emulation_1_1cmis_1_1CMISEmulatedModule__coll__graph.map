@@ -1,0 +1,9 @@
+<map id="tests.emulation.cmis.CMISEmulatedModule" name="tests.emulation.cmis.CMISEmulatedModule">
+<area shape="rect" id="Node000001" title=" " alt="" coords="65,847,315,1365"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1base_1_1EmulatedModule.html" title="Base class for emulated modules." alt="" coords="5,120,223,755"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,768,163,846,158,847,149,769"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,5,135,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,84,117,120,111,120,111,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="247,405,285,470"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,470,238,755,229,831,224,830,233,754,261,470"/>
+</map>

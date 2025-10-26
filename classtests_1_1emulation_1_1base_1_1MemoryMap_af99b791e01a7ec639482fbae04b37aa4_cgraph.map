@@ -1,0 +1,7 @@
+<map id="tests.emulation.base.MemoryMap.write_word" name="tests.emulation.base.MemoryMap.write_word">
+<area shape="rect" id="Node000001" title="Write a 16&#45;bit word to the current page." alt="" coords="5,37,223,77"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1hardware_1_1EmulatedI2CBus.html#a2a7bf09bf1b5796ffb5bc9e039db72a2" title=" " alt="" coords="278,5,481,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,42,264,37,264,42,223,47"/>
+<area shape="rect" id="Node000003" href="$classtests_1_1emulation_1_1base_1_1MemoryMap.html#ab3c032e263344441c22e7516dc3e08ae" title="Write a byte to the current page." alt="" coords="271,69,488,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,68,258,72,257,77,223,73"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="src.modules.base.BaseModule.__str__" name="src.modules.base.BaseModule.__str__">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,229,109"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1base_1_1BaseModule.html#a5d797582331ce2b0d5d51d1acba5fa7c" title=" " alt="" coords="278,5,523,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,67,298,46,299,51,207,72"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a3ae7ef885da8e96e9631a7d38206238b" title=" " alt="" coords="277,133,524,173"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,107,299,128,298,133,206,112"/>
+<area shape="rect" id="Node000008" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#ab9a9265195496bd65698b245bbeeff2d" title=" " alt="" coords="289,69,512,109"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="230,87,276,87,276,92,230,92"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1detection_1_1detector_1_1ModuleDetector.html#a1381963782d79a461415eb8e7219544d" title=" " alt="" coords="577,5,792,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="501,131,522,119,538,104,546,88,554,71,570,55,580,49,583,54,574,59,558,75,550,91,542,107,526,123,504,135"/>
+<area shape="rect" id="Node000005" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a7de855e3b1f7db0ff57db1ae6f0870dd" title=" " alt="" coords="572,69,797,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="490,131,582,110,583,115,491,136"/>
+<area shape="rect" id="Node000006" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a057e8bce361ffbe39bf662c71e19dc84" title=" " alt="" coords="584,133,785,173"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="524,151,570,151,570,156,524,156"/>
+<area shape="rect" id="Node000007" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#ad5d613bb1b9bb6b6c5710d46e353eb97" title=" " alt="" coords="572,197,797,237"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="491,171,583,192,582,197,490,176"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="490,67,582,46,583,51,491,72"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="512,87,558,87,558,92,512,92"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="491,107,583,128,582,133,490,112"/>
+</map>

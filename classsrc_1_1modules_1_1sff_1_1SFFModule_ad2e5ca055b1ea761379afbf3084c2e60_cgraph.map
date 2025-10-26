@@ -1,0 +1,9 @@
+<map id="src.modules.sff.SFFModule.set_configuration" name="src.modules.sff.SFFModule.set_configuration">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,227,109"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a38587a2bfb5ab9e015d7b28d904f24d4" title=" " alt="" coords="297,5,499,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,67,296,46,297,51,206,72"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1sff_1_1SFFModule.html#a58b465adf185a23e0a71adf5382d5426" title=" " alt="" coords="297,69,499,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,87,283,87,283,92,227,92"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1modules_1_1base_1_1BaseModule.html#a6bb8e32dd8de03f2b3529d499d6f07af" title=" " alt="" coords="275,133,521,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,107,297,128,296,133,204,112"/>
+</map>

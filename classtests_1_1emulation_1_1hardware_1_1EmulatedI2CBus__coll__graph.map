@@ -1,0 +1,3 @@
+<map id="tests.emulation.hardware.EmulatedI2CBus" name="tests.emulation.hardware.EmulatedI2CBus">
+<area shape="rect" id="Node000001" title="Emulates an I2C bus for module communication." alt="" coords="5,5,191,205"/>
+</map>

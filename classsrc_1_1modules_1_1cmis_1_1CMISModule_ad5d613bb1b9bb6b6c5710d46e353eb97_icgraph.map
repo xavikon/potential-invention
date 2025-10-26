@@ -1,0 +1,15 @@
+<map id="src.modules.cmis.CMISModule._select_page" name="src.modules.cmis.CMISModule._select_page">
+<area shape="rect" id="Node000001" title=" " alt="" coords="607,133,832,173"/>
+<area shape="rect" id="Node000002" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a33b10a4b1376fcfe2ed6aebb2465014b" title=" " alt="" coords="295,5,541,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="678,128,622,92,558,60,523,48,524,43,560,55,625,88,681,123"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a3ae7ef885da8e96e9631a7d38206238b" title=" " alt="" coords="295,69,541,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="611,133,512,112,513,107,612,128"/>
+<area shape="rect" id="Node000005" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#a4ee4bb9014d315a32cb2e5e8477a3a85" title=" " alt="" coords="295,133,541,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="593,156,541,156,541,151,593,151"/>
+<area shape="rect" id="Node000006" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#ade49f6179198cba73b212fafef3e32a7" title=" " alt="" coords="277,198,559,223"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="607,179,559,188,491,201,490,195,558,183,606,173"/>
+<area shape="rect" id="Node000007" href="$classsrc_1_1modules_1_1cmis_1_1CMISModule.html#ad63e182d3b08a2f8af670fa4bedffb9d" title=" " alt="" coords="295,248,541,288"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="674,183,620,211,560,237,517,251,515,245,558,232,618,206,671,178"/>
+<area shape="rect" id="Node000004" href="$classsrc_1_1modules_1_1base_1_1BaseModule.html#a04a652c82696275aad617e5e5d18e02b" title=" " alt="" coords="5,69,229,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,92,230,92,230,87,281,87"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="src.hardware.hal.HardwareInterface.reset_module" name="src.hardware.hal.HardwareInterface.reset_module">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,203,77"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1base_1_1EmulatedModule.html#aae091aa53525508cf4d99b51cdd7745d" title=" " alt="" coords="251,5,476,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,43,237,38,237,44,203,48"/>
+<area shape="rect" id="Node000003" href="$classsrc_1_1hardware_1_1hal_1_1HardwareInterface.html#a5e5dea0ca28ff53a23a4d63d2ddebd57" title=" " alt="" coords="265,69,462,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,67,252,73,251,78,202,72"/>
+</map>

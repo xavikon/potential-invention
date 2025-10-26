@@ -1,0 +1,17 @@
+<map id="tests.emulation.base.ModuleConfig" name="tests.emulation.base.ModuleConfig">
+<area shape="rect" id="Node000001" title="Configuration for an emulated module." alt="" coords="486,363,689,603"/>
+<area shape="rect" id="Node000002" href="$classtests_1_1emulation_1_1base_1_1FormFactor.html" title="Supported module form factors." alt="" coords="5,143,193,263"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,260,206,283,342,361,472,426,470,431,340,366,203,288,170,265"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="309,5,359,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,64,206,122,175,145,172,140,203,118,295,59"/>
+<area shape="rect" id="Node000004" href="$classtests_1_1emulation_1_1base_1_1ModuleType.html" title="Types of modules that can be emulated." alt="" coords="217,140,451,265"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="337,85,337,140,331,140,331,85"/>
+<area shape="rect" id="Node000005" href="$classtests_1_1emulation_1_1base_1_1MediaType.html" title="Types of media supported by modules." alt="" coords="475,120,700,285"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="372,60,465,118,476,125,473,129,462,122,370,64"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="392,264,477,356,473,360,388,267"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="590,285,590,346,585,346,585,285"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="723,170,761,235"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="734,237,715,286,683,350,678,347,710,284,729,235"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="843,170,913,235"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="874,237,857,288,844,315,827,340,800,368,769,393,705,433,702,429,766,389,796,364,823,337,839,313,852,286,869,235"/>
+</map>

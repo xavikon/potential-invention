@@ -1,0 +1,121 @@
+CMIS classifies modules into three types
+ - Data agnostic system interface modues:  These are simple transceivers that data a signal in and translate it to a signal out and vice versa.  They do not know what the content of the data is.
+ - Data format aware system interface modules:  These understand the data, at least at a PHY layer, that is being transported and are able to do lane deskew (sync headers alignment) and FEC coding/decoding
+ - Client Enapsulation modules:  These have independent line side connections and optionally non-persistent system side links.  Meaning the presence of a system side link is not required to maintain a servicable line side link and the presence of a system side link does not change the behavior of the line side link.
+
+CMIS Supplemental Specs
+ - These include additional functionality that may not be prevalent in all CMIS modules
+ - They cannot modify base CMIS capabilities by default, but may optionally includde contradictory behaviors that the management entity must 'opt-in' to in order to enable the new behavior
+
+ CMIS-VCS
+  - Signal Integrity parameters are extended beyond the baseline CMIS set using this supplement
+  - When the VCS is enabled, it may override base capabilities
+  - When a base capability is overridden, it shall be specified in the VCS
+
+ C-CMIS
+  - Specifications for modules with coherent transmision capabilitiess
+
+ CMIS-FF
+  - This covers form factor specific management facilities
+  - Would include low speed electrical signals
+  - Industry is moving away from these in favor of less-hardware intensive operations
+
+ CMIS-LT
+  - Specifies data structures and mechanisms to emulate bidirectional message exchange between electical link endpoints
+  - Enables higher layer managed link training, without needing the hardware itself to manage it
+  - Activities and behaviors of the link endpoints for both the host and module that make use of these facilities are specified elsewhere
+
+ CMIS-ELSFP
+  - External laser source resource modules
+
+Chapter 4 -- Informal Overview
+    Applications are standardized signal or data transmission functions.
+    Data Paths are routes through the module that an Application may be applied to.  These may consist of a subset of the host/media interface lanes.
+    A module may provide for multiple, parallel and mutually independent Applications to occur on different Data Paths.
+    There is only symmetry between the lanes, asymmetry is not currently supported.
+    The widest application is at most eight host lanes and eight media lanes, even if more lanes are present in the device
+    Passive cables or modules with very lower power consumption may not support the Module State Machine for host-controlled power-up.
+    Resource Modules provide technical resources to enable data transmission, but they themselves do not provide data transmission services.
+    Resource Modules support the Module State Machine, but not the Data Path State Machine or Network Path State Machines
+
+
+    Think of CMIS in terms of layers
+        Lowest Layer -- Physical interconnect and electrical connection, these are purely hardware specs and have no functional connotation beyond the electrical transfer of higher level data from one device to another (I2C, HW Signals, etc.)
+        Management Signaling Layer -- This begins to attribute management functionality to signals, e.g. a hardware signal for module reset or interrupt.  The concept of reset or interrupt are management services attributed to hardware signals
+        Data Transfer Layer -- The layer on top of the physical layer that conveys how data is transferred between the management entity and the managed device
+        Register Access Layer (RAL) -- Simple read and write operations from or to a 256-byte addressable memory window.  Larger memory space accesses are defined in chapter 7.8
+        Message Exchange Layer (CDB) -- An optional messaging construct on top of the RAL that allows for more sophisticated messages to be conveyed between the module and the management entity (think opcodes)
+        Management Application layer -- The top layer of CMIS where management operations and the effects of those operations are defined.  This is the 'business logic' of CMIS that is then carried out by mechanisms described in the lower layers
+
+    Custom extensions for module enhanced features must always be optional.  All CMIS modules must operate as though there were not customizations available
+    The module must not assume that the host is capable of using or aware of any custom extensions
+    The host must be aware, enabled and willing to use optional features for them to impact module operation.
+    Custom interrupts must remain silent until enabled by the host by opting into their behavior.
+
+    Major revisions will be backwards compatible (e.g. 5.1, 5.2. 5.3 are all compatible, but newer revisions may add additional features)
+
+    CMIS Modules are required to support a hardware reset signal (Reset) and an interrupt signal (Interrupt).  
+    CMIS Modules may optionally support a full or partial power up of the module with a signal (LowPwrRequestHW).  If the module has no pin, the module behaves as though this pin is present and Asserted.
+    The CMIS signals are mapped to form factor specific signals in Appendix A
+
+
+    The 256-byte addressable memory is divided into lower memory (addresses 00h to 7Fh) and upper memory (80h and FFh).
+
+    You can read up to 8 bytes at at time, or optionally if the module supports it up to 128 bytes if the full page read feature is supported.
+    Reads may be rejected by the module for generic (section 5.2.4) and specific reasons (chapter 7.8)
+    Rejected reads can be retried until successful
+    
+    Writes may take the form of up to 8 byte values.
+    Writes may be rejected for generic (section 5.2.4) or specific (chapter 7.8) reasons
+    Writes may be rejected and if they are they have no effect on the target
+    Writes can be retried until success
+    The host shall not include a mixture of voltatile and non-volatile regiers in the same write operation
+
+    Host may implement a test function that explicitly tests for module readiness rather than simply retry the next desired action
+
+    Upon temporary access rejection the host may:  schedule next access based on worst case timing specifications, perform retries until success, or perform test prior to read/write attempts
+
+    A write does not indication completion of or synchronization to an effect.  To ensure an effect has been applied to the module, status indicators, flags, handshaking bits must be used.
+
+
+
+Chapter 6 -- Core Management Features (required)
+
+
+
+Chapter 7 -- Advanced Management Features (optional)
+
+Chapter 8 -- Memory Map
+
+Chapter 9 -- Command Data Block Memory Based Messaging mechanisms
+
+Chapter 10 -- Timing Specifications and Dependencies
+
+
+Related Documents:
+ - I2C Specification: https://www.nxp.com/docs/en/user-guide/UM10204.pdf
+ - QSFP-DD Specification: http://www.qsfp-dd.com/specification
+ - OSFP Specification: https://osfpmsa.org/specification.html
+ - SFF-8024: https://www.snia.org/technology-communities/sff/specifications
+ - OIF-CMIS-VCS-01.0:  CMIS Versatile Control Sets
+ - OIF-C-CMIS-01.3: Coherent CMIS
+ - OIF-CMIS-FF-01.0: Form Factor Specific Management Features
+ - OIF-CMIS-LT-01.0: CMIS Support for Link Training
+ - OIF-CMIS-ELSFP-01.0: External Laser SFF
+ - SFF-8074: SFP Specification
+ - SFF-8636: SFF Management Interface Specification for 4 lane modules
+ - SFF-8679: SFF Hardware and Electrical Specifications
+ - OIF-CEI:  Common Electrical Interface Specification
+
+Logical Expressions have suffix T, e.g. (ModuleReadyT is a logical expression)
+Signal symbols have suffix S, e.g. (ResetS is a signal)
+
+Custom fields are up to the indvidiual module vendor to define.
+Optional features that are not implemented shall have their bit values and fields set to zero.
+
+Glossary:
+
+CMIS - Common Management Interface Specification
+VCS - Versatile Control Set
+C-CMIS - Coherent transmission modules
+

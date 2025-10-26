@@ -1,0 +1,3 @@
+"""
+Emulation package initialization.
+"""

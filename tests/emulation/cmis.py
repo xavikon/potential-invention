@@ -3,8 +3,7 @@ CMIS module emulator implementation.
 Emulates modules that follow the Common Management Interface Specification.
 """
 import random
-import struct
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 from .base import EmulatedModule, ModuleConfig, EmulationError
 
 class CMISEmulatedModule(EmulatedModule):
@@ -12,25 +11,58 @@ class CMISEmulatedModule(EmulatedModule):
     Emulates a CMIS-compliant module.
     Implements memory pages and control interfaces according to the CMIS specification.
     """
+    # Constants for monitoring registers
+    _SFF8024_ATTR_TX_POWER_OFFSET = 0x20
+    _SFF8024_ATTR_RX_POWER_OFFSET = 0x30
+    _SFF8024_ATTR_TX_BIAS_OFFSET = 0x40
+    
+    # Class-level type annotations
+    _tx_bias_ma: List[float]
+    _tx_power_mw: List[float]
+    _rx_power_mw: List[float]
+    
+    # Class-level variable for type hints
+    _tx_bias_ma: List[float]
+    _tx_power_mw: List[float]
+    _rx_power_mw: List[float]
     
     def __init__(self, config: ModuleConfig):
         """Initialize CMIS module emulator"""
-        super().__init__(config)
+        # Initialize member variables before calling parent class
         self._tx_disable_mask = 0x00
         self._tx_fault_mask = 0x00
         self._rx_los_mask = 0x00
-        self._tx_bias_ma = [0.0] * self.config.num_channels
-        self._tx_power_mw = [0.0] * self.config.num_channels
-        self._rx_power_mw = [0.0] * self.config.num_channels
         self._active_application = 1  # Default application
         self._power_class = 1  # Default power class
+        self._temperature = 25.0  # Default temperature
+        self._voltage = 3.3  # Default voltage
         
-        # Initialize monitoring values based on module type
+        # Initialize arrays for monitoring values
+        init_value = 0.0
+        if not config.media_type.name.startswith('COPPER'):
+            init_values = {"bias": 30.0, "tx_power": 0.5, "rx_power": 0.4}
+        else:
+            init_values = {"bias": 0.0, "tx_power": 0.0, "rx_power": 0.0}
+            
+        self._tx_bias_ma = [init_values["bias"]] * config.num_channels
+        self._tx_power_mw = [init_values["tx_power"]] * config.num_channels  
+        self._rx_power_mw = [init_values["rx_power"]] * config.num_channels
+        
+        # Call parent class initialization
+        super().__init__(config)
+        
+    def initialize_channels(self) -> None:
+        """Initialize per-channel values"""
+        # Set initial values based on module type
         if not self.config.media_type.name.startswith('COPPER'):
-            for i in range(self.config.num_channels):
-                self._tx_bias_ma[i] = 30.0  # Typical bias current
-                self._tx_power_mw[i] = 0.5  # Typical TX power
-                self._rx_power_mw[i] = 0.4  # Typical RX power
+            init_values = {"bias": 30.0, "tx_power": 0.5, "rx_power": 0.4}
+        else:
+            init_values = {"bias": 0.0, "tx_power": 0.0, "rx_power": 0.0}
+            
+        # Initialize arrays with proper values
+        self._tx_bias_ma = [init_values["bias"]] * self.config.num_channels
+        self._tx_power_mw = [init_values["tx_power"]] * self.config.num_channels  
+        self._rx_power_mw = [init_values["rx_power"]] * self.config.num_channels
     
     def _initialize_memory_map(self) -> None:
         """Initialize the CMIS memory map"""
@@ -75,6 +107,10 @@ class CMISEmulatedModule(EmulatedModule):
     
     def update_monitoring(self) -> None:
         """Update monitoring values in memory map"""
+        # Initialize arrays if needed
+        if not isinstance(self._tx_power_mw, list):
+            self.initialize_channels()
+            
         # Add some random variation
         temp_variation = random.uniform(-0.5, 0.5)
         voltage_variation = random.uniform(-0.02, 0.02)
@@ -90,15 +126,23 @@ class CMISEmulatedModule(EmulatedModule):
             for i in range(self.config.num_channels):
                 base_addr = 0x10 + (i * 12)
                 
+                # Add variations and update array values
                 bias_variation = random.uniform(-0.2, 0.2)
                 power_variation = random.uniform(-0.01, 0.01)
                 
+                # Update array values with variations
+                if not self._tx_disable_mask & (1 << i):
+                    self._tx_power_mw[i] += power_variation
+                    self._rx_power_mw[i] += power_variation
+                    self._tx_bias_ma[i] += bias_variation
+                
+                # Write updated values to memory map
                 self.memory_map.write_word(base_addr + 0,
-                    self._encode_power(self._tx_power_mw[i] + power_variation))
+                    self._encode_power(self._tx_power_mw[i]))
                 self.memory_map.write_word(base_addr + 2,
-                    self._encode_power(self._rx_power_mw[i] + power_variation))
+                    self._encode_power(self._rx_power_mw[i]))
                 self.memory_map.write_word(base_addr + 4,
-                    self._encode_bias(self._tx_bias_ma[i] + bias_variation))
+                    self._encode_bias(self._tx_bias_ma[i]))
         
         # Update status flags
         self.memory_map.select_page(0x83)  # Flags page
@@ -146,25 +190,33 @@ class CMISEmulatedModule(EmulatedModule):
         if not 0 <= channel < self.config.num_channels:
             raise EmulationError(f"Invalid channel number: {channel}")
         
-        mask = 1 << channel
         if fault_type == 'tx_fault':
+            mask = 1 << channel
             if state:
                 self._tx_fault_mask |= mask
                 self._tx_power_mw[channel] = 0.0
             else:
                 self._tx_fault_mask &= ~mask
-                self._tx_power_mw[channel] = 0.5
+                if not self._tx_disable_mask & mask:
+                    self._tx_power_mw[channel] = 0.5
         elif fault_type == 'rx_los':
+            mask = 1 << channel
             if state:
                 self._rx_los_mask |= mask
                 self._rx_power_mw[channel] = 0.0
             else:
                 self._rx_los_mask &= ~mask
-                self._rx_power_mw[channel] = 0.4
+                if not (self._tx_disable_mask & mask or self._tx_fault_mask & mask):
+                    self._rx_power_mw[channel] = 0.4
         else:
             raise EmulationError(f"Unknown fault type: {fault_type}")
-        
-        self.update_monitoring()
+            
+        # Update the memory map but prevent random variations
+        self.memory_map.select_page(0x11)
+        base_addr = 0x10 + (channel * 12)
+        self.memory_map.write_word(base_addr + 0, self._encode_power(self._tx_power_mw[channel]))
+        self.memory_map.write_word(base_addr + 2, self._encode_power(self._rx_power_mw[channel]))
+        self.memory_map.write_word(base_addr + 4, self._encode_bias(self._tx_bias_ma[channel]))
     
     def set_temperature(self, temperature: float) -> None:
         """Set module temperature"""
@@ -175,6 +227,10 @@ class CMISEmulatedModule(EmulatedModule):
         """Set module voltage"""
         self._voltage = voltage
         self.update_monitoring()
+    
+    def get_active_application(self) -> int:
+        """Get the currently active application"""
+        return self._active_application
     
     def _encode_application(self, rate: float) -> int:
         """Encode a bit rate as a CMIS application code"""

@@ -15,6 +15,10 @@ from .modules import (
     CMISModule
 )
 from .capabilities import CapabilityManager, CapabilityRequirement
+from .modules.state_machine import ModuleStateMachine, ModuleState, DataPathState, StateMachineError
+from .hardware.error_injection import ErrorInjector, ErrorInjectionError
+from .hardware.bridge import I2CBridgeServer
+from .hardware.emulator_client import EmulatorClient, EmulatorClientError
 
 __all__ = [
     # Hardware abstraction
@@ -41,7 +45,24 @@ __all__ = [
     
     # Capability management
     'CapabilityManager',
-    'CapabilityRequirement'
+    'CapabilityRequirement',
+    
+    # State Machine Emulation
+    'ModuleStateMachine',
+    'ModuleState',
+    'DataPathState',
+    'StateMachineError',
+    
+    # Error Injection
+    'ErrorInjector',
+    'ErrorInjectionError',
+    
+    # TCP Bridge Server
+    'I2CBridgeServer',
+
+    # TCP Client (drop-in hardware interface replacement)
+    'EmulatorClient',
+    'EmulatorClientError'
 ]
 
 __version__ = '0.1.0'

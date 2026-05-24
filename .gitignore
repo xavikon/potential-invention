@@ -52,6 +52,11 @@ site/
 *.log
 logs/
 
+# Allure Reports
+allure-results/
+allure-report/
+reports/
+
 # Local development settings
 local_settings.py
 *.sqlite3
